@@ -52,6 +52,7 @@ public class Studentcontroller {
 		Optional<Student> student=studentrepo.findById(id);
 		if(student.isPresent()) {
 			studentrepo.deleteById(id);
+			// hello
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
